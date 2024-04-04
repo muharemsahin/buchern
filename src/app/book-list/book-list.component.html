@@ -1,0 +1,23 @@
+<!-- book-list.component.html -->
+<div *ngIf="books.length > 0; else noBooks">
+  <h2>Books</h2>
+  <!-- book-list.component.html -->
+<div *ngIf="books && books.length > 0">
+  <div class="book-card" *ngFor="let book of books">
+    <div class="book-title">{{ book.title }}</div>
+    <div class="book-details">ISBN: {{ book.isbn }}</div>
+    <div class="book-details">Year of Publication: {{ book.yearOfPublication }}</div>
+    <div class="book-details">Number of Pages: {{ book.numberOfPages }}</div>
+    <div class="book-details">Language: {{ book.language }}</div>
+    <div class="book-details">Group: {{ book.group }}</div>
+    <div class="book-details">Compensation: {{ calculateEvaluation(book) }} €</div>
+  </div>
+</div>
+
+  
+</div>
+<ng-template #noBooks>
+  <p>No books available.</p>
+</ng-template>
+
+

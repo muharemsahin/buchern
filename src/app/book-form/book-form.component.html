@@ -1,0 +1,21 @@
+<form (submit)="submitBookForm()">
+  <label>Title:</label>
+  <input type="text" name="title" [(ngModel)]="newBook.title" required>
+
+  <label>ISBN:</label>
+  <input type="text" name="isbn" [(ngModel)]="newBook.isbn" required>
+
+  <label>Year Of Publication:</label>
+  <input type="number" name="yearOfPublication" [(ngModel)]="newBook.yearOfPublication" required>
+
+  <label>Number Of Pages:</label>
+  <input type="number" name="numberOfPages" [(ngModel)]="newBook.numberOfPages" required>
+
+  <label>Language:</label>
+  <input type="text" name="language" [(ngModel)]="newBook.language" required>
+
+  <label>Group:</label>
+  <input type="text" name="groupp" [(ngModel)]="newBook.group" required>
+
+  <button type="submit">Add book</button>
+</form>
